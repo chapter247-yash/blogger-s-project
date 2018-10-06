@@ -1,0 +1,33 @@
+<br><br>
+<h2> Registration Form </h2>
+<form [formGroup]="form"  class="normal-form">
+        <mat-grid-list cols="2" rowHeight="600px">  
+        <mat-grid-tile>
+          <div class="controles-container">
+            <input type="hidden" formControlName="_id">
+            <mat-form-field>
+              <input formControlName="fname"  matInput placeholder="Name">
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+              <input formControlName="lname" matInput placeholder="Lastname">
+              <mat-error>This field is mandatory.</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+              <input formControlName="email" matInput placeholder="Email ID (xyz@gmail.com)">
+              <mat-error >This field is mandatory.</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+              <input id="mobile" formControlName="mobile" matInput placeholder="Mobile Number">
+           </mat-form-field>
+           <mat-form-field>
+                <input id="password" formControlName="password" matInput placeholder="Password">
+            </mat-form-field>
+            <div class="button-row">
+                <button mat-raised-button color="primary" (click)="onSubmit(form.value)"  type="submit"> Submit </button>
+                <button mat-raised-button color="pink" (click)="onClear()">Clear</button>
+                </div>
+          </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </form>
